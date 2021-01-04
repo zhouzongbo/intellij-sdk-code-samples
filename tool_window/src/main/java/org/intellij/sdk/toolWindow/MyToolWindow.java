@@ -15,11 +15,16 @@ public class MyToolWindow {
   private JLabel currentTime;
   private JLabel timeZone;
   private JPanel myToolWindowContent;
+  
+  private JTextField myText;
+  private JButton testButton;
 
   public MyToolWindow(ToolWindow toolWindow) {
+    // 貌似不用初始化
     hideToolWindowButton.addActionListener(e -> toolWindow.hide(null));
     refreshToolWindowButton.addActionListener(e -> currentDateTime());
-
+    myText.setText("不晓得");
+    testButton.addActionListener(e -> System.out.println("我点了"));
     this.currentDateTime();
   }
 
