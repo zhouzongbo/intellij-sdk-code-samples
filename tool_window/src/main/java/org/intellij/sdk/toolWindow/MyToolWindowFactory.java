@@ -17,6 +17,7 @@ public class MyToolWindowFactory implements ToolWindowFactory {
    * @param project    current project
    * @param toolWindow current tool window
    */
+  @Override
   public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
     MyToolWindow myToolWindow = new MyToolWindow(toolWindow);
     ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
